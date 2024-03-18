@@ -1,0 +1,26 @@
+Payment calculation
+#Stripe API
+Database configuration
+#DATABASE CONFIGURATION
+app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:///app.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
+app.config['SQLALCHEMY_ECHO'] = True
+Broken log in page
+mport React, { useState } from 'react';
+import { Button, Form, Container } from 'react-bootstrap';
+import SignUp from './SignUp'; // Import SignUp component
+import Cookies from 'js-cookie';
+
+function LogIn() {
+  const [data, setData] = useState({
+    username: '',
+    password: '',
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setData({
+      ...data,
+      [name]: value,
+    });
+  };
